@@ -44,8 +44,10 @@ headers = {
 }
 
 if __name__ == '__main__':
+    print(f'{time.strftime("%Y-%m-%d %H:%M:%S")} 启动双色球爬虫')
     # df = get_history_data(get_data())  # 初次运行时使用，获取历史数据
     while True:
         if f'{time.strftime("%H:%M")}' == '23:50':
             df = get_today_data(get_data()).to_csv('data.csv', mode='a', index=False, header=False)
+            print(f'{time.strftime("%Y-%m-%d %H:%M:%S")} 双色球数据爬取成功')
         time.sleep(59)
