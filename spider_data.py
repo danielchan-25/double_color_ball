@@ -34,7 +34,7 @@ def get_history_data(rows):
 def get_today_data(rows):
     ''' 获取当日数据 '''
     data = [i.text for i in rows[0]][1:]
-    return pd.DataFrame(data)
+    return pd.DataFrame([data])
 
 
 url = 'https://datachart.500.com/ssq/history/newinc/history.php'
